@@ -1,0 +1,180 @@
+/* Global Styles - Mobile First Approach */
+.about-section {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 100px 20px; /* Padding for the section */
+    border-radius: 40px; /* Rounded corners */
+}
+
+.about-description { /* Centered text for mobile */
+    margin-top: 20px; /* Margin for spacing */
+}
+
+.about-description h4,
+.about-description h1 {
+    margin: 0; /* Remove default margin */
+}
+
+
+.about-description h2 {
+    font-size: 30px; /* Adjusted size for mobile */
+    margin-top: 0; /* Space above title */
+    color: #333; /* Dark color for visibility */
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-description p {
+    font-size: 14px; /* Base font size for mobile */
+    color: #555; /* Gray color for description */
+    margin-bottom: 20px; /* Space below paragraph */
+    text-align: center;
+}
+
+.about-image-container {
+    text-align: center; /* Centered for mobile */
+    margin-top: 20px; /* Top margin for spacing */
+}
+
+.about-image {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Maximum width for the image */
+    margin: 5px auto; /* Center the image */
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.btn-about {
+    width: 80%;
+    margin: 10px auto; /* Center button */
+    display: block; /* Ensure it behaves as a block element */
+    background-color: #164ce2;
+    font-size: 13px;
+    font-family: Poppins, sans-serif;
+}
+
+/* Media Queries for Different Screen Sizes */
+
+/* Small Devices (min-width: 426px and max-width: 768px) */
+@media (min-width: 425px) and (max-width: 767px) {
+    .about-section {
+        padding: 100px 20px; /* Increased padding */
+    }
+
+    .about-description h4 {
+        font-size: 1.3rem; /* Larger for better visibility */
+    }
+
+    .about-description h1 {
+        font-size: 30px; /* Larger for better visibility */
+        margin-bottom: 10px;
+    }
+
+    .about-description p {
+        font-size: 14px; /* Slightly larger font */
+        text-align: center; /* Center text */
+    }
+     
+    .btn-about {
+        width: 80%;
+        margin: 10px auto; /* Center button */
+        display: block; /* Ensure it behaves as a block element */
+        background-color: #164ce2;
+        font-size: 14px;
+        font-family: Poppins, sans-serif;
+    }
+
+    .about-image {
+        width: 90%; /* Slightly reduced width for better alignment */
+        max-width: 350px; /* Maximum width */
+    }
+}
+
+/* Medium Devices (min-width: 769px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-description {
+        text-align: left; /* Left-aligned for better readability on larger screens */
+    }
+
+    .about-description h2 {
+        font-size: 2rem; /* Standard desktop font size */
+        text-align: left;
+    }
+    
+    .about-description p{
+        text-align: left;
+    }
+
+    .about-image {
+        width: 80%; /* Reduced image width */
+    }
+
+    .btn-about {
+        width: 100%;
+        margin: 10px auto; /* Center button */
+        display: block; /* Ensure it behaves as a block element */
+        background-color: #164ce2;
+        font-size: 14px;
+        font-family: Poppins, sans-serif;
+    }
+}
+
+/* Large Devices (min-width: 1025px and max-width: 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .about-description h2 {
+        font-size: 2.5rem; /* Larger font size for large devices */
+        text-align: left;
+    }
+
+    .about-description p {
+        font-size: 1.25rem; /* Slightly larger font size */
+        text-align: left;
+    }
+
+    .about-image {
+        width: 75%; /* Reduced image width */
+    }
+
+    .btn-about {
+        width: 100%;
+        margin: 10px auto; /* Center button */
+        display: block; /* Ensure it behaves as a block element */
+        background-color: #164ce2;
+        font-size: 14px;
+    }
+}
+
+/* Extra Large Devices (min-width: 1441px) */
+@media (min-width: 1441px) {
+    .about-section {
+        padding: 100px 20px; /* Padding for the section */
+        margin: 0 20px;
+    }
+
+    .about-description h2 {
+        font-size: 2.5rem; /* Very large title for extra-large screens */
+        text-align: left;
+    }
+
+    .about-description p {
+        font-size: 1.25rem; /* Larger font for description */
+        text-align: left;
+    }
+
+    .about-image {
+        width: 70%; /* Width for extra-large screens */
+    }
+
+    .btn-about {
+        width: 100%;
+        margin: 10px auto; /* Center button */
+        display: block; /* Ensure it behaves as a block element */
+        background-color: #164ce2;
+        font-size: 14px;
+        font-family: Poppins, sans-serif;
+    }
+}
