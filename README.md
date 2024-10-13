@@ -15,8 +15,8 @@ This is a fully responsive one-page website for **Carenest Home Care Service**, 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/carenest-homecare-website.git
-   cd carenest-homecare-website
+   git clone (https://github.com/ONE-SOLUTION-GH/carenest-home-care.git)
+   cd carenest-home-care.git
    ```
 
 2. **Install dependencies**:
