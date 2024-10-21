@@ -1,42 +1,92 @@
 /* General styling for the services section */
 .services-section {
-  padding: 90px 20px;
+  padding: 90px 30px;
   background-color: #fff;
   text-align: center;
 }
 
-
-.section-title-services{
+.section-title-services {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
 }
 
-/* Services container: Grid layout */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust card size dynamically */
-  gap: 30px; /* Reduced gap for closer spacing */
-  justify-content: center; /* Center the cards in the section */
-  justify-items: center;   /* Ensure items inside are centered */
-  align-items: stretch;
-  margin: 30px 0 ;
-}
-
+/* Service card styling */
 .service-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: left;
-  width: 70%; /* Full width to fill grid cell */
-  max-width: 350px; /* Ensure all cards maintain the same max width */
-  height: 100%;     /* Ensure all cards are equal height */
+  width: 100%;
+  max-width: 400px; /* Limit the width of the card */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer; /* Change cursor on hover to indicate interactivity */
+}
+
+.service-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-content .service-title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.service-p2{
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Service description with limited height */
+.service-description {
+  font-size: 14px;
+  color: #7f8c8d;
+  max-height: 60px; /* Default collapsed height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Expanded card styling */
+.service-card.expanded .service-description {
+  max-height: 200px; /* Limit the expanded height */
+  overflow: auto;
+}
+
+/* Read More button styling */
+.read-more-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #164ce2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 13px;
+  font-family: Poppins, sans-serif;
+  align-self: flex-start; /* Prevent button from expanding to full width */
+}
+
+.read-more-btn:hover {
+  background-color: #3477db;
+  transform: scale(1.05);
+}
+
+/* Services container: Grid layout */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center; /* Center the cards */
 }
 
 .service-card:hover {
@@ -51,136 +101,78 @@
   object-fit: contain;
 }
 
-/* Service content inside each card */
-.service-content {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
+/* Mobile-specific styles */
+@media (max-width: 425px) {
+  .services-section {
+    padding: 90px 30px;
+    background-color: #fff;
+    text-align: center;
+  }
 
-.service-p2{
-  font-size: 14px;
-  color: #666;
-}
+  .section-title-services {
+    font-size: 30px;
+    font-weight: bold;
+  }
 
-.service-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #2c3e50;
-}
+  .service-card {
+    max-width: 100%;
+    margin: 10px auto;
+  }
 
-.service-description {
-  font-size: 14px;
-  color: #7f8c8d;
-  margin-top: auto; /* Push description to the bottom */
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
+  .service-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
 
-/* Show more/less button */
-.read-more-btn {
-  margin-top: 10px;
-  padding: 5px; /* Increased padding for easier tapping */
-  background-color: #164ce2;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  font-size: 13px;
-  font-family: Poppins, sans-serif;
-}
+  .service-description {
+    font-size: 14px;
+  }
 
-.read-more-btn:hover {
-  background-color: #3477db;
-  transform: scale(1.05); /* Scale effect on hover */
+  .service-p2{
+    color: #555;
+    font-size: 14px;
+  }
+
+  .read-more-btn {
+    font-size: 14px;
+    align-self: flex-start; /* Button stays with its content */
+  }
 }
 
 /* Responsive layout for larger screens */
 @media (min-width: 768px) {
   .services-container {
     grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    gap: 10px; /* Further reduced gap for closer spacing */
   }
-  
 
-  
+  .service-description {
+    font-size: 16px; /* Larger font for bigger screens */
+  }
 }
 
 @media (min-width: 1024px) {
   .services-section {
     padding: 100px 20px;
   }
+
   .services-container {
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .section-title-services {
     font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
   }
 
   .service-card {
-    max-width: 90%; /* Increase card width for larger screens */
+    max-width: 90%;
   }
 
-  .service-p2{
-    font-size: 1.5rem;
-    width: 50%;
-    margin: 5px auto 10px;
-    color: #666;
-  }
-  
-  
   .service-description {
     font-size: 18px;
-    color: #7f8c8d;
-    margin-top: auto; /* Push description to the bottom */
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
-  
-  /* Show more/less button */
+
   .read-more-btn {
-    margin-top: 10px;
-    padding: 5px; /* Increased padding for easier tapping */
-    background-color: #164ce2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
     font-size: 15px;
-    font-family: Poppins, sans-serif;
-  }
-}
-
-/* Mobile-specific styles */
-@media (max-width: 425px) {
-  .section-title-services {
-    font-size: 30px; /* Smaller title font for mobile */
-    font-weight: bold;
-  }
-
-  .service-card {
-    max-width: 80%; /* Full width on mobile */
-    
-  }
-
-  .service-title {
-    font-size: 16px; /* Smaller title font for mobile */
-  }
-
-  .service-description {
-    font-size: 14px; /* Smaller description font for mobile */
-  }
-
-  .read-more-btn {
-    width: 100%; /* Full width button for easier interaction */
-    padding: 5px; /* Increased padding for tapping */
-    font-size: 14px; 
-    /* margin: 0 auto; */
   }
 }

@@ -25,11 +25,11 @@ const ContactInfo = () => {
           </div>
           <div className="contact-item">
             <FaMapMarkerAlt className="icon" />
-            <p>Amasaman</p>
+            <p>Amasaman Sonitra rd</p>
           </div>
           <div className="contact-item">
             <FaEnvelope className="icon" />
-            <p>info@carenest.com</p>
+            <p>carenest24@gmail.com</p>
           </div>
         </div>
 

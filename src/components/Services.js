@@ -38,6 +38,16 @@ const servicesData = [
       "Our trained nursing staff is available 24/7 to provide comprehensive care, including monitoring, medication administration, and personal care services to ensure safety and comfort.",
     image: "nursing_services.png",
   },
+
+  {
+  id: 5,
+    title: "Domestic House Keeping",
+    description:
+      "Comprehensive housekeeping services to maintain a clean and organized home environment.",
+    details:
+      "Our professional staff offers regular cleaning, laundry, and household management services to ensure your home remains spotless and comfortable. We provide personalized domestic assistance, including grocery shopping, meal preparation, and general upkeep, tailored to meet the specific needs of your household.",
+    image: "nursing_services.png",
+  }
 ];
 
 const ServicesSection = () => {
