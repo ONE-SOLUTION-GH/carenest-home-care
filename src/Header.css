@@ -1,189 +1,129 @@
-
 /* Hero Section Container */
 .hero-section {
-    background-image: url('../public/banner1.jpg'); /* Default background */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding: 150px 20px; /* Padding for mobile */
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    animation: backgroundChange 20s infinite ease-in-out;
-    transition: backgroundChange 0.5s ease; /* Smooth background change */
-  }
-  
-  .hero-section::after {
-    content: "";
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.7;
-    z-index: -1;
-  }
-  
-  /* Hero Content */
-  .hero-content {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    color: white;
-    animation: fadeIn 2s ease-in-out; /* Smooth fade-in effect */
-  }
-  
-  .hero-section h1 {
-    font-size: 1.7rem; /* Mobile font size */
-    line-height: 1.1;
-    margin-bottom: 5px;
-    font-weight: 700;
-  }
-  
-  .hero-section .highlight {
-    color: #164ce2; /* Bright color for the highlighted word */
-    font-size: 1.7rem; /* Highlighted word size for mobile */
-    display: inline-block;
-    animation: colorChange 10s infinite; /* Animated color change */
-  }
-  
-  .hero-section p {
-    font-size: 14px; /* Mobile font size */
-    margin-bottom: 15px; /* Reduced margin */
-    color: #f0f0f0;
-  }
-  
-  .hero-btn {
-    font-family: poppins;
-    padding: 10px 10px;
-    font-size: 12px;
-    background-color: #164ce2;
-    border-radius: 40px; /* Fixed typo */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 150px 20px; /* Padding for mobile */
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s ease-in-out; /* Smooth fade-in effect */
+  transition: background 0.5s ease; /* Smooth background change */
+}
 
-  .hero-content {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    color: white;
-    animation: fadeIn 2s ease-in-out; /* Smooth fade-in effect */
-  }
+.hero-section::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  z-index: -1;
+}
 
-  .cta-button a{
-    color: white;
+/* Hero Content */
+.hero-content {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  animation: fadeIn 2s ease-in-out; /* Smooth fade-in effect */
+}
+
+.hero-section h1 {
+  font-size: 1.7rem; /* Mobile font size */
+  line-height: 1.1;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.hero-section .highlight {
+  color: #164ce2; /* Bright color for the highlighted word */
+  font-size: 1.7rem; /* Highlighted word size for mobile */
+  display: inline-block;
+  animation: colorChange 10s infinite; /* Animated color change */
+}
+
+.hero-section p {
+  font-size: 14px; /* Mobile font size */
+  margin-bottom: 15px; /* Reduced margin */
+  color: #f0f0f0;
+}
+
+.hero-btn {
+  font-family: poppins;
+  padding: 10px 10px;
+  font-size: 12px;
+  background-color: #164ce2;
+  border-radius: 40px; /* Fixed typo */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button a {
+  color: white;
+}
+
+.hero-btn:hover {
+  background-color: #031d70;
+  transform: translateY(-5px); /* Button lift on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .hero-btn:hover {
-    background-color: #031d70;
-    transform: translateY(-5px); /* Button lift on hover */
+  100% {
+    opacity: 1;
   }
-  
-  /* Animations */
-  @keyframes backgroundChange {
-    0% {
-      background-image: url('../public/banner1.jpg');
-    }
-    50% {
-      background-image: url('../public/banner2.jpg');
-    }
-    100% {
-      background-image: url('../public/banner3.jpg');
-    }
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    color: #4f7efe;
   }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  50% {
+    color: #164ce2; 
   }
-  
-  @keyframes colorChange {
-    0%, 100% {
-      color: #4f7efe;
-    }
-    50% {
-      color: #164ce2; /* Highlighted text color shift */
-    }
-  }
-  
-  /* Media Queries for Responsive Design */
-  @media (min-width: 425px) {
-    .hero-section {
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 425px) {
+  .hero-section {
       padding: 150px 0; /* Increased padding for small tablets */
-    }
-  
-    .hero-section h1 ,.hero-section .highlight{
+  }
+
+  .hero-section h1, .hero-section .highlight {
       font-size: 1.7rem; /* Increase font size for small tablets */
-    }
-  
-    .hero-section p {
+  }
+
+  .hero-section p {
       font-size: 14px; /* Increase paragraph font size */
-    }
-
-    .hero-content {
-      width: 100%;
-      text-align: center;
-      margin: 0 auto;
-      color: white;
-      animation: fadeIn 2s ease-in-out; /* Smooth fade-in effect */
-    }
-
-
-    .hero-btn {
-      font-family: poppins;
-      padding: 10px 10px;
-      font-size: 12px;
-      background-color: #164ce2;
-      border-radius: 40px; /* Fixed typo */
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
   }
-  
-  @media (min-width: 768px) {
-    .hero-section {
+}
+
+@media (min-width: 768px) {
+  .hero-section {
       padding: 200px 20px; /* Increased padding for larger screens */
-    }
-  
-    .hero-section h1 {
+  }
+
+  .hero-section h1 {
       font-size: 3.5rem; /* Larger font size for desktop */
-    }
-  
-    .hero-section .highlight {
+  }
+
+  .hero-section .highlight {
       font-size: 3.5rem; /* Highlighted word size for larger screens */
-    }
-  
-    .hero-section p {
+  }
+
+  .hero-section p {
       font-size: 1.3rem; /* Larger paragraph font size */
-    }
-
-    .hero-content {
-      width: 100%;
-      text-align: center;
-      margin: 0 auto;
-      color: white;
-      animation: fadeIn 2s ease-in-out; /* Smooth fade-in effect */
-    }
-  
-    .hero-btn {
-      font-family: poppins;
-      padding: 15px 15px;
-      font-size: 1.1rem;
-      background-color: #164ce2;
-      border-radius: 40px;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
   }
+}
 
-  @media (min-width: 1440px) {
-    .hero-section{
+@media (min-width: 1440px) {
+  .hero-section {
       padding: 300px 20px;
-    }
   }
-  
+}
