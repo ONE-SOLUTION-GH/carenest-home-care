@@ -39,10 +39,10 @@ const ContactInfo = () => {
             <a href="https://facebook.com" className="social-link" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
-            <a href="https://twitter.com" className="social-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/carenest24?s=11" className="social-link" target="_blank" rel="noopener noreferrer">
               <FaTwitter />
             </a>
-            <a href="https://instagram.com" className="social-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/carenestgh?igsh=MW40bjl4YmdkcDgwYw==" className="social-link" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
             <a href="https://linkedin.com" className="social-link" target="_blank" rel="noopener noreferrer">

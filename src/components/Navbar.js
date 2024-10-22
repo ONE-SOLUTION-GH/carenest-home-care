@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className={`navbar ${isOpen ? 'open' : ''}`}>
       <div className="navbar-container">
         <div className="logo">
-          <img src="carenest_logo.png" alt="Carenest" />
+          <img src={`${process.env.PUBLIC_URL}/carenest_logo.png`} alt="Carenest" />
           <span>Carenest</span>
         </div>
         <div className="hamburger" onClick={toggleMenu}>

@@ -9,7 +9,7 @@ const servicesData = [
       "Personalized care for the elderly, ensuring comfort and well-being at all times.",
     details:
       "We provide compassionate and experienced caregivers who specialize in elderly care. Services include companionship, medication reminders, and assistance with daily activities.",
-    image: "nursing_care.jpg",
+    image: `${process.env.PUBLIC_URL}/nursing_care.jpg`,
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const servicesData = [
       "Professional care to help patients recover quickly after surgery.",
     details:
       "Our post-operative care includes monitoring vital signs, medication management, and support with physical therapy exercises to ensure a smooth recovery process.",
-    image: "post_surgery.png",
+    image: `${process.env.PUBLIC_URL}/post_surgery.png`,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const servicesData = [
       "Expert care for managing chronic conditions such as diabetes.",
     details:
       "We offer specialized services to help manage chronic illnesses, including regular health assessments, medication management, and lifestyle guidance to improve quality of life.",
-    image: "chronic_illness.png",
+    image: `${process.env.PUBLIC_URL}/chronic_illness.png`,
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const servicesData = [
       "Round-the-clock nursing care for patients needing continuous support.",
     details:
       "Our trained nursing staff is available 24/7 to provide comprehensive care, including monitoring, medication administration, and personal care services to ensure safety and comfort.",
-    image: "nursing_services.png",
+    image: `${process.env.PUBLIC_URL}/nursing_services.png`,
   },
 
   {
@@ -46,7 +46,7 @@ const servicesData = [
       "Comprehensive housekeeping services to maintain a clean and organized home environment.",
     details:
       "Our professional staff offers regular cleaning, laundry, and household management services to ensure your home remains spotless and comfortable. We provide personalized domestic assistance, including grocery shopping, meal preparation, and general upkeep, tailored to meet the specific needs of your household.",
-    image: "nursing_services.png",
+    image: `${process.env.PUBLIC_URL}/domestic_house_keeping.png`,
   }
 ];
 

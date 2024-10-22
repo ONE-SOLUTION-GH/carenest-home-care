@@ -4,11 +4,11 @@ import '../Packages.css';
 
 const Packages = () => {
   const handleFormClick = () => {
-    window.open('https://your-google-form-link.com', '_blank'); //  Google Form link
+    window.open('https://forms.gle/t8m3ZUK2qPZhns2P8', '_blank'); //  Google Form link
   };
 
   const handlePDFClick = () => {
-    window.open('/path-to-your-form.pdf', '_blank'); //  PDF form
+    window.open(process.env.PUBLIC_URL + '/carenest_client_reg_form.pdf', '_blank'); //  PDF form
   };
 
   return (

@@ -13,7 +13,7 @@ const Testimonial = () => {
             <div className="testimonial-content">
               <img
                 className="testimonial-img"
-                src="https://via.placeholder.com/100"
+                src= {`${process.env.PUBLIC_URL}/joe_passport.jpg`}
                 alt="John Doe"
               />
               <p className="testimonial-text">
@@ -26,7 +26,7 @@ const Testimonial = () => {
             <div className="testimonial-content">
               <img
                 className="testimonial-img"
-                src="https://via.placeholder.com/100"
+                src={`${process.env.PUBLIC_URL}/joe_passport.jpg`}
                 alt="Jane Smith"
               />
               <p className="testimonial-text">
@@ -39,7 +39,7 @@ const Testimonial = () => {
             <div className="testimonial-content">
               <img
                 className="testimonial-img"
-                src="https://via.placeholder.com/100"
+                src={`${process.env.PUBLIC_URL}/joe_passport.jpg`}
                 alt="Michael Lee"
               />
               <p className="testimonial-text">

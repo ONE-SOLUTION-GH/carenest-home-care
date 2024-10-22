@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src="carenest_logo.png" alt="Carenest Logo" className="footer-logo-img" />
+          <img src={`${process.env.PUBLIC_URL}/carenest_logo.png`} alt="Carenest Logo" className="footer-logo-img" />
           <p className="footer-business-name">Carenest</p>
         </div>
         
@@ -22,8 +22,8 @@ const Footer = () => {
 
         <div className="footer-social">
           <a href="https://facebook.com" className="social-icon"><i className="fab fa-facebook"></i></a>
-          <a href="https://instagram.com" className="social-icon"><i className="fab fa-instagram"></i></a>
-          <a href="https://twitter.com" className="social-icon"><i className="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/carenestgh?igsh=MW40bjl4YmdkcDgwYw==" className="social-icon"><i className="fab fa-instagram"></i></a>
+          <a href="https://x.com/carenest24?s=11" className="social-icon"><i className="fab fa-twitter"></i></a>
         </div>
 
         <div className="footer-bottom">
